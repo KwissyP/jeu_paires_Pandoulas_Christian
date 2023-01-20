@@ -21190,6 +21190,10 @@ header {
   display: none;
 }
 
+#secBefore {
+  margin-top: 20%;
+}
+
 #tableau {
   margin-left: 45%;
 }
