@@ -1,3 +1,7 @@
+// Game Launch
+
+// Start of the game
+// FlipCard
 const cartes = document.querySelectorAll('.carte');
 
 let carteRetournee = false;
@@ -54,3 +58,4 @@ function aleatoire(){
     })
 }
 aleatoire();
+// End of FlipCard

@@ -1,4 +1,8 @@
 @charset "UTF-8";
+@font-face {
+  font-family: "Aalto";
+  src: url("../fonts/gloria.ttf");
+}
 /*!
  * Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
@@ -21146,6 +21150,29 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+h1, .h1 {
+  text-align: center;
+  margin-top: 5%;
+  color: white;
+  font-weight: bolder;
+  font-family: "Aalto";
+  font-size: 60px;
+}
+
+#para1 {
+  text-align: center;
+}
+
+#gif {
+  height: 80px;
+}
+
+#timer {
+  color: white;
+  font-family: "Aalto";
+  font-size: 30px;
+}
+
 *,
 ::before,
 ::after {
@@ -21155,8 +21182,20 @@ textarea.form-control-lg {
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Aalto" !important;
   background-image: url("../../public/img/galaxy.jpg");
+}
+
+header {
+  display: none;
+}
+
+#tableau {
+  margin-left: 45%;
+}
+
+#playerInput {
+  width: 15%;
 }
 
 .faceCarte {
@@ -21173,9 +21212,10 @@ body {
 }
 
 .grille {
+  display: none !important;
   display: grid;
   grid-template: repeat(2, 200px)/repeat(4, 200px);
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
 .carte {
@@ -21198,7 +21238,6 @@ body {
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
 }
 
 .face {
