@@ -11,20 +11,12 @@ body {
     background-image: url('../../public/img/galaxy.jpg');
 }
 
-header {
-    display: none;
-}
-
 #secBefore {
     margin-top: 20%;
 }
 
-#tableau{
-    margin-left: 45%
-}
-
 #playerInput {
-    width: 15%;
+    width: 40%;
 }
 
 .faceCarte {
@@ -41,10 +33,9 @@ header {
 }
 
 .grille {
-    display: none!important;
     display: grid;
     grid-template: repeat(2, 200px) / repeat(4, 200px);
-    margin-top: 50px;
+    margin-top: 50px!important;
 }
 
 .carte {

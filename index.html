@@ -12,34 +12,30 @@
 </head>
 
 <body>
-    <header>
+    <header style="display: none;" class="text-white" id="header">
         <h1>Trouve le Roberto caché en toi</h1>
         <p id="para1"><img src="./public/img/gif.gif" alt="gif" id="gif"><span id="timer"></span></p>
     </header>
-    <section id="secBefore">
+    <section id="secBefore" class="container d-flex flex-column justify-content-center align-items-center">
         <div class="text-white" id="tableau">
-            <table class="text-center mb-4">
+            <table class="text-center mb-4" id="score">
                 <thead>
                     <tr>
-                        <th colspan="2">Tableau des SCORES</th>
+                        <th colspan="2" class="fs-3">Tableau des SCORES</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                    </tr>
+                <tbody id="tBody">
                 </tbody>
             </table>            
         </div>
         <div id="disparition" class="d-flex justify-content-center">
             <input type="text" id="playerInput" class="rounded-pill form-control me-2">
-            <button type="button" class="btn btn-secondary rounded-pill">Ajouter joueur</button>
+            <button type="button" class="btn btn-secondary rounded-pill" id="addPlayer">Ajouter joueur</button>
         </div>
         <div class="d-flex justify-content-center mt-3">
-        <button type="button" class="btn btn-success rounded-pill fw-bold">Let's GO</button></div>
+        <button type="button" class="btn btn-success rounded-pill fw-bold" id="startGame">Let's GO</button></div>
     </section>
-    <div class="grille justify-content-center">
+    <div class="grille justify-content-center" id="jeu" style="display: none!important;">
 
         <div class="carte" data-fashion="cuisine">
             <div class="double-face">
