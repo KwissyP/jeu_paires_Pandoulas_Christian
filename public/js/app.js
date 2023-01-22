@@ -189,7 +189,7 @@ easyButton.addEventListener('click', () => {
     easyMode()
 });
 // HARD MODE
-document.getElementById("startGame").addEventListener("click", function () {
+document.getElementById("startGame").addEventListener("click", () => {
     easyModeActive = false;
     let tableau = document.getElementById('secBefore');
     tableau.style = 'display: none!important';
