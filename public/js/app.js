@@ -70,43 +70,6 @@ function retourneCarte() {
 }
 
 function galere() {
-    if (easyModeActive) {
-        if (remove.length === 4) {
-            stopTimer();
-            let endTime = Date.now();
-            let duree = (endTime - startTime) / 1000
-            let playerName = document.getElementById("playerInput").value;
-            scoreTable.addPlayer({
-                name: playerName,
-                mode: 'EASY',
-                score: duree
-            });
-            let retour = document.getElementById('secBefore');
-            retour.removeAttribute('style');
-            header.style.display = 'none';
-            let jeu = document.getElementById('jeu');
-            jeu.style.display = 'none';
-            resetGame();
-        }
-    } else {
-        if (remove.length === 6) {
-            stopTimer();
-            let endTime = Date.now();
-            let duree = (endTime - startTime) / 1000
-            let playerName = document.getElementById("playerInput").value;
-            scoreTable.addPlayer({
-                name: playerName,
-                mode: 'HARD',
-                score: duree
-            });
-            let retour = document.getElementById('secBefore');
-            retour.removeAttribute('style');
-            header.style.display = 'none';
-            let jeu = document.getElementById('jeu');
-            jeu.style.display = 'none';
-            resetGame();
-        }
-    }
     if (premiereCarte.getAttribute('data-fashion') === secondeCarte.getAttribute('data-fashion')) {
         remove.push(premiereCarte);
         remove.push(secondeCarte);
@@ -132,6 +95,43 @@ function galere() {
                     card.classList.add('highlight')
                 });
             }
+        }
+    }
+    if (easyModeActive) {
+        if (remove.length === 6) {
+            stopTimer();
+            let endTime = Date.now();
+            let duree = (endTime - startTime) / 1000
+            let playerName = document.getElementById("playerInput").value;
+            scoreTable.addPlayer({
+                name: playerName,
+                mode: 'EASY',
+                score: duree
+            });
+            let retour = document.getElementById('secBefore');
+            retour.removeAttribute('style');
+            header.style.display = 'none';
+            let jeu = document.getElementById('jeu');
+            jeu.style.display = 'none';
+            resetGame();
+        }
+    } else {
+        if (remove.length === 8) {
+            stopTimer();
+            let endTime = Date.now();
+            let duree = (endTime - startTime) / 1000
+            let playerName = document.getElementById("playerInput").value;
+            scoreTable.addPlayer({
+                name: playerName,
+                mode: 'HARD',
+                score: duree
+            });
+            let retour = document.getElementById('secBefore');
+            retour.removeAttribute('style');
+            header.style.display = 'none';
+            let jeu = document.getElementById('jeu');
+            jeu.style.display = 'none';
+            resetGame();
         }
     }
 }
