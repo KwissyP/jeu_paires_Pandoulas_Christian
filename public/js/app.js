@@ -162,6 +162,7 @@ function resetGame() {
         card.style.display = 'block';
         document.querySelector('.grille').appendChild(card);
     });
+    remove = [];
     removedCards = [];
     cartes.forEach(carte => {
         carte.childNodes[1].classList.remove('active')
