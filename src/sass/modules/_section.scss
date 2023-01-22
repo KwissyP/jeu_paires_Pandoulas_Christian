@@ -71,3 +71,19 @@ body {
 .active {
     transform: rotateY(180deg)
 }
+
+.highlight {
+    animation: blink 0.5s ease-in-out infinite;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
