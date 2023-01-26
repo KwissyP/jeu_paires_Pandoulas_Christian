@@ -21998,7 +21998,7 @@ h1, .h1 {
   color: white;
   font-weight: bolder;
   font-family: "Aalto";
-  font-size: 60px;
+  font-size: 60px !important;
 }
 
 #para1 {
@@ -22037,7 +22037,7 @@ body {
 }
 
 .faceCarte {
-  object-fit: cover;
+  object-fit: contain;
   height: 100%;
   width: 75%;
   border-radius: 5px;

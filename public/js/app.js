@@ -49,7 +49,6 @@ function aleatoire() {
         card.style.order = randomPos;
     })
 }
-aleatoire();
 // Fin PETITES FUNCTIONS
 
 // FUNCTIONS HARD TROP FUN TROP GALERE
@@ -146,8 +145,9 @@ function easyMode() {
                 removedCards.push(cartes[j]);
                 cartes[i].style.display = 'none';
                 cartes[j].style.display = 'none';
-                cartes.splice(j, 1);
-                cartes.splice(i, 1);
+                let cartesArray = Array.from(cartes);
+                cartesArray.splice(j, 1);
+                cartesArray.splice(i, 1);
                 count--;
                 i--;
                 break;
@@ -187,7 +187,8 @@ easyButton.addEventListener('click', () => {
     joueur = document.getElementById('playerInput').value;
     startTimer();
     startTime = Date.now();
-    easyMode()
+    easyMode();
+    aleatoire();
 });
 // HARD MODE
 document.getElementById("startGame").addEventListener("click", () => {
@@ -200,6 +201,7 @@ document.getElementById("startGame").addEventListener("click", () => {
     joueur = document.getElementById('playerInput').value;
     startTimer();
     startTime = Date.now();
+    aleatoire();
 });
 // CLICK EVENT ON CARD
 cartes.forEach(carte => {
